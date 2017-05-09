@@ -7,9 +7,9 @@ def verlet(xt,vt):
 	return p,f
 
 mi=0.003
-m=1
+m=1.7
 k=1
-g=1.625
+g=9.8
 n=m*g
 fat=mi*n
 dt=0.001
@@ -20,7 +20,7 @@ t1=0
 x=[1]
 v=[0]
 
-while t1<60:
+while t1<25:
 	t1+=dt
 	xt1,vt1=verlet(xt1,vt1)
 	x.append(xt1)
@@ -28,7 +28,7 @@ while t1<60:
 	t.append(t1)
 
 plt.figure(figsize=(6,5), dpi=96)
-plt.axis([0,60,-1,1.5])
+plt.axis([0,25,-1,1])
 
 ax=plt.gca()
 ax.xaxis.set_ticks_position('bottom')
@@ -40,10 +40,10 @@ plt.rc('font', **{'sans-serif' : 'Arial', 'family' : 'sans-serif'})
 plt.xlabel(r'Tempo(s)')
 plt.ylabel(r'Posi\c{c}\~{a}o(m) e Velocidade($\frac{m}{s}$)')
 
-plt.title(r'Oscila\c{c}\~{a}o Com Atrito Na Lua', fontsize=12)
+plt.title(r'Oscila\c{c}\~{a}o Com Atrito Na Terra', fontsize=12)
 plt.grid()
 plt.plot(t,x, 'r-', linewidth=1, label="$x_{(t)}$")
 plt.plot(t,v, 'b-', linewidth=1, label="$v_{(t)}$")
 plt.legend(loc='upper right')
-plt.savefig("XxTVxTIS.pdf", dpi=96)
+plt.savefig("XxTVxTM.pdf", dpi=96)
 plt.show()
