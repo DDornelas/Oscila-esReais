@@ -9,7 +9,7 @@ def verlet(xt,vt):
 mi=0.003
 m=1
 k=1
-g=9.8
+g=1.625
 n=m*g
 fat=mi*n
 dt=0.001
