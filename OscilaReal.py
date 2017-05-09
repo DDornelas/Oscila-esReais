@@ -7,9 +7,9 @@ def verlet(xt,vt):
 	return p,f
 
 mi=0.003
-m=1
+m=1.7
 k=1
-g=1.625
+g=9.8
 n=m*g
 fat=mi*n
 dt=0.001
@@ -30,3 +30,5 @@ while t1<25:
 	if xt1>-0.001 and xt1<0.001:
 		i+=1
 		print "%d: x=%f, t=%f\n"%(i, xt1, t1)
+	
+
